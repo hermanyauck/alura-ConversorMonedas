@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 
 public class Conexion {
 
-    public static void conectar(){
+    public static ExchangeRate conectar(){
         String APIkey = "083279bea2192b770c7d9b4b";
         String direccion = "https://v6.exchangerate-api.com/v6/"+APIkey+"/latest/USD/";
         HttpClient client = HttpClient.newHttpClient();
