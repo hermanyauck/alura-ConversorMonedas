@@ -20,6 +20,8 @@ public class Conexion {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
             ExchangeRate o = new Gson().fromJson(response.body(), ExchangeRate.class);
+            //System.out.println(o.conversion_rates().ARS());
+            System.out.println(o.conversion_rates());
             return o;
         }catch(Exception e){
             System.out.println(e.toString());
