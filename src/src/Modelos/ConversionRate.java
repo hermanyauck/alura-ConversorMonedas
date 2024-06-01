@@ -1,9 +1,9 @@
 package Modelos;
 
 public record ConversionRate(
-        String USD,
-        String ARS,
-        String EUR,
-        String MXN,
-        String BRL) {
+        Float USD,
+        Float ARS,
+        Float EUR,
+        Float MXN,
+        Float BRL) {
 }
