@@ -25,15 +25,17 @@ public class Main {
             System.out.println("OPCION INGRESADA NO ES VALDIA:");
         }
         if (num != 7) {
-            String Moneda = "";
+            String MonedaI = "";
+            String MonedaO = "";
             switch (num) {
-                case 1, 5 -> Moneda = "USD";
-                case 2, 4 -> Moneda = "ARS";
-                case 3, 6 -> Moneda = "EUR";
+                case 1, 5 -> {MonedaI = "USD"; MonedaO = "ARS";}
+                case 2, 4 -> MonedaI = "ARS";
+                case 3, 6 -> MonedaI = "EUR";
             }
-            System.out.println("Cuantos "+Moneda+" quieres convertir: ");
+            System.out.println("Cuantos "+MonedaI+" quieres convertir: ");
             int pesos = Integer.valueOf(lectura.nextLine());
-            Conversion.Convertir(pesos, Moneda);
+            float Convertido = Conversion.Convertir(pesos, MonedaO);
+            System.out.println(Convertido);
         }
     }
 }
