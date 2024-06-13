@@ -28,14 +28,17 @@ public class Main {
             String MonedaI = "";
             String MonedaO = "";
             switch (num) {
-                case 1, 5 -> {MonedaI = "USD"; MonedaO = "ARS";}
-                case 2, 4 -> MonedaI = "ARS";
-                case 3, 6 -> MonedaI = "EUR";
+                case 1 -> {MonedaI = "USD"; MonedaO = "ARS";}
+                case 2 -> {MonedaI = "ARS"; MonedaO = "USD";}
+                case 3 -> {MonedaI = "EUR"; MonedaO = "ARS";}
+                case 4 -> {MonedaI = "ARS"; MonedaO = "EUR";}
+                case 5 -> {MonedaI = "USD"; MonedaO = "MXN";}
+                case 6 -> {MonedaI = "EUR"; MonedaO = "BRL";}
             }
             System.out.println("Cuantos "+MonedaI+" quieres convertir: ");
             int pesos = Integer.valueOf(lectura.nextLine());
-            float Convertido = Conversion.Convertir(pesos, MonedaO);
-            System.out.println(Convertido);
+            float Convertido = Conversion.Convertir(pesos, MonedaI, MonedaO);
+            System.out.println("Obtiene la cantidad de: "+Convertido+" "+MonedaO);
         }
     }
 }
